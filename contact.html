@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon//favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Page transition Animsition -->
+  <link rel="stylesheet" href="css/animsition.min.css">
+  <!-- SweetAlert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.2/dist/sweetalert2.min.css">
+  <!-- AnimateCss for Scrolla -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Contact Us</title>
+</head>
+
+<body class="animsition-overlay" data-animsition-overlay="true">
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTop" class="scrollTop"><i class="fas fa-1x fa-arrow-up"></i></button>
+
+  <header>
+    <!-- Navbar -->
+    <nav class="nav">
+      <ul class="menu-nav">
+        <div class="wrap_nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link animsition-link">
+              Home
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="discover.html" class="menu-nav__link animsition-link">
+              Discover
+            </a>
+          </li>
+          <li class="menu-nav__item active_contact">
+            <a href="contact.html" class="menu-nav__link animsition-link">
+              Contact
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="header_bg_contact">
+
+      <!-- Toggle Burger Menu -->
+      <div class="menu-btn">
+        <span class="menu-btn__burger"></span>
+      </div>
+
+      <!-- Header Titles -->
+      <div class="header_title_contact">
+        <h1 class="animate" data-animate="zoomInDown" data-duration="2s" data-delay="0.9s" data-offset="100">Contact Us
+        </h1>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="divider60"></div>
+
+  <!-- Form container -->
+  <div class="container">
+    <div class="row">
+
+      <!-- Image for Form -->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 cent">
+        <div class="image_form">
+          <h2 class="animate" data-animate="slideInUp" data-duration="2s" data-delay="0.9s" data-offset="100">Contact Us
+          </h2>
+          <p class="animate" data-animate="slideInUp" data-duration="2s" data-delay="0.9s" data-offset="100">Our Contact
+            Service will answer to your requests</p>
+
+          <!-- <img src="img/contact/dev.svg" alt="" height='500' width='320'> -->
+          <!-- <img src="img/contact/sofa_call.svg" alt="" height='500' width='320'> -->
+          <img src="img/contact/phone_jump.svg" alt="" height="400" width="300" class="animate" data-animate="flipInY"
+            data-duration="2s" data-delay="0.9s" data-offset="100">
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 cent">
+        <div class="contact_form">
+          <fieldset class="input-fields">
+            <legend>Compile this form with your message!</legend>
+            <form action="" method="post" id="form" onsubmit="return false;">
+
+              <div>
+                <input type="text" class="input" name="nome" id="nome" placeholder="Name" onkeyup="checknome()">
+                <div class="error" id="errornome">Only letters are allowed</div>
+              </div>
+
+              <div>
+                <input type="email" class="input" email="email" id="email" placeholder="Email" required
+                  onKeyup="checkmail()">
+                <div class="error" id="errormail">Please, check your email</div>
+              </div>
+
+              <div>
+                <textarea placeholder="Message" id="messaggio" name="messaggio" onkeyup="checkmessaggio()"></textarea>
+                <div class="error" id="errormessaggio">No special characters allowed</div>
+              </div>
+
+              <div class="form-check chickyboxes">
+                <input type="checkbox" id="box-1" name="checkbox" required onchange="checkprivacy()">
+                <label for="box-1">I accept <a href="privacy.html">Privacy Terms</a></label>
+                <div class="error" id="errorprivacy">Please, accept privacy</div>
+              </div>
+
+              <button class="btn btn_form" name="submit" id="send" value="Contattaci" disabled="disabled"
+                onclick="sweetalert();">SEND</button>
+
+            </form>
+          </fieldset>
+        </div>       
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider60"></div>
+
+  <!-- Info Map container -->
+  <div class="container-fluid container_address">
+    <h2 class="animate" data-animate="tada" data-duration="1s" data-delay="0.5s" data-offset="100">Here We are!</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 cent">
+        <div class="info animate" data-animate="rollIn" data-duration="1s" data-delay="0.6s" data-offset="100">
+          <img src="img/contact/map.svg" alt="" height="200" width="200">
+          <h5>HOME DESIGN LTD.</h5>
+          <h6>London, Ackedon Street, 153</h6>
+          <p><strong>Email:</strong><em>
+              homedesign@agency.com</em></p>
+          <p><strong>Phone:</strong> +55 26 255 452</p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 cent">
+        <div class="map animate" data-animate="shake" data-duration="1s" data-delay="0.9s" data-offset="100">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondra%2C%20Regno%20Unito!5e0!3m2!1sit!2sit!4v1587723352520!5m2!1sit!2sit"
+            width="650" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider60"></div>
+
+  <!-- Office Container -->
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="office animate" data-animate="slideInLeft" data-duration="1s" data-delay="0.8s" data-offset="100">
+          <h3>Our Office</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, error impedit? Sit dolore quo dolorem
+            officia assumenda, rem magnam itaque hic fuga atque, eligendi consectetur voluptates labore veniam
+            exercitationem quos nihil voluptatem doloremque. Dolorum nostrum inventore beatae nulla amet reprehenderit
+            sequi laudantium eum natus quia? Tempora provident, consequuntur quia harum esse illo at ex quas qui
+            exercitationem minima libero doloremque aut natus rerum nostrum corrupti illum blanditiis explicabo?
+            Exercitationem commodi eveniet laboriosam et nam facilis, veritatis labore cupiditate eius neque.?</p>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="cent">
+          <img src="img/contact/office.svg" alt="" height="400" width="300" class="animate" data-animate="rollIn"
+            data-duration="1s" data-delay="0.8s" data-offset="100">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider60"></div>
+
+  <!-- Cookie banner -->
+  <div class="cookie_container">
+    <p>We use technical cookies to offer you the best experience. We don't store your data.<br> Learn more about our <a
+        href="/privacy.html">Privacy Terms</a></p>
+    <button class="btn cookie_btn">Okay</button>
+  </div>
+
+  <!-- Footer section -->
+  <footer class="footer page-footer font-small blue pt-4">
+    <div class="container text-center text-md-left">
+      <div class="row">
+        <div class="img_footer">
+          <img src="img/footer/footer1.svg" alt="" height="200" width="200">
+        </div>
+
+        <div class="col-md-6 mt-md-0 mt-3">
+          <h5 class="text-uppercase font-weight-bold">Home Design Ltd.</h5>
+          <p>Home Design Agency for architectural works and restyling</p>
+        </div>
+
+
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Contacts</h5>
+
+          <p>London, Ackedon Street, 153</p>
+          <p><strong>Email:</strong> homedesign@agency.com</p>
+          <p><strong>Phone:</strong> +55 26 255 452</p>
+
+        </div>
+
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Menu</h5>
+
+          <ul class="list-unstyled contact_page_footer">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="discover.html">Discover</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="privacy.html">Privacy Terms</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Social icons -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="icons">
+            <li class="social_li">
+              <a href="#">
+                <span id="social_fb" class="fab fa-facebook-f">
+                </span>
+              </a>
+            </li>
+            <li class="social_li"><a href="#"><span id="social_in" class="fab fa-instagram"></span></a></li>
+            <li class="social_li"><a href="#"><span id="social_tw" class="fab fa-twitter"></span></a></li>
+            <li class="social_li"><a href="#"><span id="social_li" class="fab fa-linkedin-in"></span></a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#"><em> ChiaraLyn WebDesign</em></a>
+    </div>
+  </footer>
+
+  <!-- JQuery -->
+  <script src="http://code.jquery.com/jquery-3.5.0.js"></script>
+  <!-- Animsition for page transition -->
+  <script src="js/page-transition/animsition.min.js"></script>
+  <script src="js/page-transition/custom-animsition.js"></script>
+  <!-- Popper and Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- Main js -->
+  <script src="js/main.js"></script>
+  <!-- Form Control -->
+  <script src="js/form-control.js"></script>
+  <!-- Sweet alert in form -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.2/dist/sweetalert2.min.js"></script>
+  <script>
+    function sweetalert() {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Message sent!',
+        showConfirmButton: true,
+        //timer: 3000,
+      });
+    }
+  </script>
+  <!-- Cookie banner -->
+  <script src="js/cookie.js"></script>
+  <!-- Scrolla + AnimateCss-->
+  <script src="js/scrolla/scrolla.jquery.js"></script>
+  <script>
+    $('.animate').scrolla();
+  </script>
+
+</body>
+
+</html>
